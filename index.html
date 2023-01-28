@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="http://web.dev">
+            <h2><span class="type">type</span>=<span class="type-value">"text"</span></h2>
+            <label for="animal">What is your favorite animal?</label>
+            <input type="text" name="animal" id="animal">
+            <button type="submit">Submit</button>
+        </form>
+        <form action="http://web.dev">
+            <h2><span class="type">type</span>=<span class="type-value">"checkbox"</span></h2>
+            <div class="checkbox">
+                <input type="checkbox" name="newsletter" id="newsletter" checked>
+                <label for="newsletter">Do you wanna subscribe?</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <form action="">
+            <h2><span class="type">type</span>=<span class="type-value">"textarea"</span></h2>
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <button type="submit">Sumbit</button>
+        </form>
+        <form action="">
+            <h2>Input datalist</h2>
+            <datalist id="datalist">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+            </datalist>
+            <input type="text" list="datalist" name="value">
+            <button type="submit">Submit</button>
+        </form>
+        <form action="">
+            <h2>Select</h2>
+            <label for="color">Color</label>
+            <select name="color" id="color">
+                <option value="pink">Pink</option>
+                <option value="orange" selected>Orange</option>
+            </select>
+            <button type="submit">Sumbit</button>
+        </form>
+        <form action="">
+            <fieldset>
+                <legend>What is your favorite?</legend>
+            
+                <label for="html">HTML</label>
+                <input type="radio" name="webfeature" value="html" id="html">
+            
+                <label for="css">CSS</label>
+                <input type="radio" name="webfeature" value="css" id="css">
+
+                <label for="css">CSS</label>
+                <input type="radio" name="webfeature" value="css" id="css">
+
+                <label for="css">CSS</label>
+                <input type="radio" name="webfeature" value="css" id="css">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
