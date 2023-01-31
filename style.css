@@ -4,92 +4,77 @@
     box-sizing: border-box;
 }
 
+*:focus-visible {
+    outline: 3px solid #45b1ee
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #fefdf8;
-}
-
-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    padding: 3rem;
-    background-color: #fdf4c6;
-    border-radius: 20px;
-    box-shadow: 0px 0px 40px #ffd500;
-    
-}
-
-form>* {
-    border: none;
-    border-radius: 5px;
-}
-
-h1 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-label {
-    margin-top: 2rem;
-    margin-bottom: 0.7rem;
-    font-size: 1.2rem;
-}
-
-input {
-    font-size: 0.9rem;
-    padding: 0 1rem 0 1rem;
-    margin-bottom: 0.5rem;
-    min-height: 2.2rem;
-}
-
-input:user-invalid {
-    border: 1px solid red;
-}
-
-input:user-valid {
-    border: 1px solid green;
-}
-
-button {
-    min-height: 3rem;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 2.5rem;
-    cursor: pointer;
-    background-image: linear-gradient(90deg, #ffe259, #ffa751);
+    font-family: sans-serif;
+    /* fallback for old browsers */
+    background: #FDC830;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #F37335, #FDC830);
     color: #fff;
 }
 
-.main {
-    min-height: 100vh;
+.wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
-.sign-in-form {
+.heading {
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 
-.label {}
-
-.mandatory-sign {
-    text-shadow: 1px 1px#ffa751;
-    color: rgb(255, 1, 1);
+.form {
+    min-width: 25vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.input {}
+.label {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
 
-.valid-rule {
-    font-size: 0.8rem;
+.input {
+    padding: 0.7rem;
+    border: none;
+    min-height: 2rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+}
+
+.password-input {
+    margin-bottom: 0.2rem;
 }
 
 .hint {
-    margin-top: 2rem;
-    font-size: 0.7rem;
+    font-family: monospace;
 }
 
-.btn {}
+.btn {
+    cursor: pointer;
+    margin-top: 2rem;
+    min-height: 50px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #00000012;
+    box-shadow: 0px 0px 5px #00000012;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.btn:hover {
+    background-color: #00000020;
+    box-shadow: 0px 0px 10px #00000020;
+}
