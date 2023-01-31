@@ -62,7 +62,7 @@ body {
 
 .btn {
     cursor: pointer;
-    padding: 2rem;
+    padding: 0 2rem;
     margin-top: 2rem;
     min-height: 50px;
     font-size: 1.5rem;
