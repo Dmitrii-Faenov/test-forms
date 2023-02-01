@@ -8,8 +8,14 @@
     outline: 3px solid #45b1ee
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* fallback for old browsers */
     background: #FDC830;
     /* Chrome 10-25, Safari 5.1-6 */
@@ -27,45 +33,86 @@ body {
     min-height: 100vh;
 }
 
+.lang-switch-container {
+    max-height: 44px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    background-color: #00000012;
+    box-shadow: 0px 0px 5px #00000012;
+    border-radius: 10px;
+}
+
+.lang-switch {
+    font-size: 1.45rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-switch:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.lang-switch:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.lang-switch:hover {
+    background-color: #00000020;
+    box-shadow: 0px 0px 10px #00000020;
+}
+
 .heading {
     margin-bottom: 2rem;
     text-align: justify;
 }
 
 .form {
-    min-width: 25vw;
+    min-width: 100vw;
     padding: 2rem;
     display: flex;
     flex-direction: column;
 }
 
 .label {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
 }
 
 .input {
     padding: 0.7rem;
     border: none;
-    min-height: 2rem;
+    min-height: 3rem;
     border-radius: 5px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
 }
 
 .password-input {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.6rem;
 }
 
 .hint {
     font-family: monospace;
+    font-size: 1rem;
 }
 
 .btn {
-    cursor: pointer;
     padding: 0 2rem;
-    margin-top: 2rem;
+    cursor: pointer;
+    margin-top: 3.5rem;
+    margin-bottom: 2.2rem;
     min-height: 50px;
-    font-size: 1.5rem;
+    height: 4.5rem;
+    font-family: inherit;
+    font-size: 1.8rem;
     text-transform: uppercase;
     background-color: #00000012;
     box-shadow: 0px 0px 5px #00000012;
@@ -78,4 +125,38 @@ body {
 .btn:hover {
     background-color: #00000020;
     box-shadow: 0px 0px 10px #00000020;
+}
+
+.sign-up,
+.sign-in {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+:is(.sign-in, .sign-up):hover {
+    color: rgba(255, 255, 255, 0.666);
+}
+
+@media (orientation: landscape) {
+    .lang-switch-container {
+        top: 10px;
+        right: 10px;
+    }
+    * {
+        font-size: 0.7em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form {
+        min-width: 50vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .form {
+        min-width: 25vw;
+    }
 }

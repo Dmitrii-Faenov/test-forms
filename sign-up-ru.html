@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,26 +8,29 @@
     <title>Форма</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="altrenate" href="index.html" hreflang="en">
-    <link rel="altrenate" href="index-ru.html" hreflang="ru">
+    <link rel="style" href="sign-up.html" hreflang="en">
+    <link rel="style" href="sign-up-ru.html" hreflang="ru">
 </head>
 
 <body>
     <main class="main">
         <div class="wrapper">
-            <form class="form" action="">
+            <form class="form" action="" method="post">
+                <label for="honeypot" hidden aria-hidden="true"></label>
+                <input type="text" id="honeypot" tabindex="-1" hidden aria-hidden="true" autocomplete="off">
+
                 <label class="label" for="email">Почта</label>
                 <input class="input" type="email" name="email" id="email" required autocomplete="username"
                     placeholder="email@mail.com">
 
-                <label class="label" for="current-password">Пароль</label>
-                <input class="input password-input" type="password" name="current-password" id="current-password"
-                    required minlength="8" autocomplete="current-password" aria-describedby="password-minlength">
+                <label class="label" for="new-password">Пароль</label>
+                <input class="input password-input" type="password" name="new-password" id="new-password" required
+                    minlength="8" autocomplete="new-password" aria-describedby="password-minlength">
                 <p class="hint" id="password-minlength">Мин. 8 символов</p>
 
-                <button class="btn">Войти</button>
+                <button class="btn">Регистрация</button>
 
-                <a class="sign-up" href="sign-up-ru.html">Регистрация</a>
+                <a class="sign-in" href="index-ru.html">Уже зарегестрированны?</a>
             </form>
             <div class="lang-switch-container">
                 <a class="lang-switch" href="index.html" aria-label="Choose an english language for this page">EN</a>
